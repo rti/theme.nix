@@ -143,7 +143,7 @@
       termMagenta = foregroundMagenta;
       termBrightMagenta = brightMagenta;
       termCyan = foregroundCyan;
-      termBrightCyan = brightMagenta;
+      termBrightCyan = brightCyan;
     };
   };
 }
