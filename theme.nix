@@ -79,7 +79,7 @@
       borderRadius = 8;
       borderWidth = 4;
       gaps = 16;
-      wallpaper = ./wallpapers/treehouse-dark.jpg;
+      wallpaper = ./wallpapers/nightsky.jpg;
       cursorTheme = "Adwaita";
       cursorSize = 24;
 
