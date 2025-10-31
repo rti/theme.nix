@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ pkgs, lib, ... }:
 
 {
   options.theme = {
@@ -74,76 +74,82 @@
     termBrightWhite = lib.mkOption { type = lib.types.str; };
   };
 
-  config = {
-    theme = rec {
-      borderRadius = 8;
-      borderWidth = 4;
-      gaps = 16;
-      wallpaper = ./wallpapers/nightsky.jpg;
-      cursorTheme = "Adwaita";
-      cursorSize = 24;
+  config =
+    let
+      gradient-svg = import ./gradient-svg.nix { inherit pkgs; };
+      gradient-png = import ./gradient-png.nix { inherit pkgs; svg = gradient-svg; };
+    in
+    {
+      theme = rec {
+        borderRadius = 8;
+        borderWidth = 4;
+        gaps = 16;
+        # wallpaper = ./wallpapers/nightsky.jpg;
+        wallpaper = gradient-png;
+        cursorTheme = "Adwaita";
+        cursorSize = 24;
 
-      # wikimedia codex
-      foreground = "#000000";
-      foreground2 = "#404244";
-      foreground3 = "#72777d";
-      foreground4 = "#a2a9b1";
-      foregroundSelect = foreground;
-      foregroundOverlay = background;
-      foregroundOverlay2 = background3;
-      foregroundOverlaySelect = background;
+        # wikimedia codex
+        foreground = "#000000";
+        foreground2 = "#404244";
+        foreground3 = "#72777d";
+        foreground4 = "#a2a9b1";
+        foregroundSelect = foreground;
+        foregroundOverlay = background;
+        foregroundOverlay2 = background3;
+        foregroundOverlaySelect = background;
 
-      background = "#ffffff";
-      background2 = "#f8f9fa";
-      background3 = "#eaecf0";
-      background4 = "#c8ccd1";
-      backgroundSelect = background3;
-      backgroundOverlay = foreground2;
-      backgroundOverlay2 = foreground3;
-      backgroundOverlaySelect = foregroundCyan;
+        background = "#ffffff";
+        background2 = "#f8f9fa";
+        background3 = "#eaecf0";
+        background4 = "#c8ccd1";
+        backgroundSelect = background3;
+        backgroundOverlay = foreground2;
+        backgroundOverlay2 = foreground3;
+        backgroundOverlaySelect = foregroundCyan;
 
-      foregroundRed = "#b32424";
-      foregroundGreen = "#14866d";
-      foregroundYellow = "#ac6600";
-      foregroundBlue = "#3366cc";
-      foregroundMagenta = "#A824B3";
-      foregroundCyan = "#1e8195";
+        foregroundRed = "#b32424";
+        foregroundGreen = "#14866d";
+        foregroundYellow = "#ac6600";
+        foregroundBlue = "#3366cc";
+        foregroundMagenta = "#A824B3";
+        foregroundCyan = "#1e8195";
 
-      backgroundRed = "#fee7e6";
-      backgroundGreen = "#d5fdf4";
-      backgroundYellow = "#fef6e7";
-      backgroundBlue = "#eaf3ff";
-      backgroundMagenta = "#f9e7fa";
-      backgroundCyan = "#daf2f7";
+        backgroundRed = "#fee7e6";
+        backgroundGreen = "#d5fdf4";
+        backgroundYellow = "#fef6e7";
+        backgroundBlue = "#eaf3ff";
+        backgroundMagenta = "#f9e7fa";
+        backgroundCyan = "#daf2f7";
 
-      brightRed = "#ff4242";
-      brightGreen = "#00af89";
-      brightYellow = "#ffcc33";
-      brightBlue = "#447ff5";
-      brightMagenta = "#ce46da";
-      brightCyan = "#2bb7d3";
+        brightRed = "#ff4242";
+        brightGreen = "#00af89";
+        brightYellow = "#ffcc33";
+        brightBlue = "#447ff5";
+        brightMagenta = "#ce46da";
+        brightCyan = "#2bb7d3";
 
-      primary = foregroundCyan;
-      secondary = foregroundMagenta;
-      urgent = termRed;
-      /* foregroundUrgentOverlay = foregroundMagenta; */
+        primary = foregroundCyan;
+        secondary = foregroundMagenta;
+        urgent = termRed;
+        /* foregroundUrgentOverlay = foregroundMagenta; */
 
-      termBlack = background;
-      termBrightBlack = foreground3;
-      termWhite = foreground;
-      termBrightWhite = foreground3;
-      termRed = foregroundRed;
-      termBrightRed = brightRed;
-      termGreen = foregroundGreen;
-      termBrightGreen = brightGreen;
-      termYellow = foregroundYellow;
-      termBrightYellow = brightYellow;
-      termBlue = foregroundBlue;
-      termBrightBlue = brightBlue;
-      termMagenta = foregroundMagenta;
-      termBrightMagenta = brightMagenta;
-      termCyan = foregroundCyan;
-      termBrightCyan = brightCyan;
+        termBlack = background;
+        termBrightBlack = foreground3;
+        termWhite = foreground;
+        termBrightWhite = foreground3;
+        termRed = foregroundRed;
+        termBrightRed = brightRed;
+        termGreen = foregroundGreen;
+        termBrightGreen = brightGreen;
+        termYellow = foregroundYellow;
+        termBrightYellow = brightYellow;
+        termBlue = foregroundBlue;
+        termBrightBlue = brightBlue;
+        termMagenta = foregroundMagenta;
+        termBrightMagenta = brightMagenta;
+        termCyan = foregroundCyan;
+        termBrightCyan = brightCyan;
+      };
     };
-  };
 }
