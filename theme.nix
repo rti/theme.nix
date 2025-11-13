@@ -76,8 +76,7 @@
 
   config =
     let
-      gradient-svg = import ./gradient-svg.nix { inherit pkgs; };
-      gradient-png = import ./gradient-png.nix { inherit pkgs; svg = gradient-svg; };
+      gradient-png = import ./gradient-png.nix { inherit pkgs; };
     in
     {
       theme = rec {
