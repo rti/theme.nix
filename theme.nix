@@ -44,6 +44,13 @@
     backgroundMagenta = lib.mkOption { type = lib.types.str; };
     backgroundCyan = lib.mkOption { type = lib.types.str; };
 
+    lightBlue = lib.mkOption { type = lib.types.str; };
+    lightRed = lib.mkOption { type = lib.types.str; };
+    lightGreen = lib.mkOption { type = lib.types.str; };
+    lightYellow = lib.mkOption { type = lib.types.str; };
+    lightMagenta = lib.mkOption { type = lib.types.str; };
+    lightCyan = lib.mkOption { type = lib.types.str; };
+
     brightBlue = lib.mkOption { type = lib.types.str; };
     brightRed = lib.mkOption { type = lib.types.str; };
     brightGreen = lib.mkOption { type = lib.types.str; };
@@ -120,6 +127,13 @@
         backgroundBlue = "#eaf3ff";
         backgroundMagenta = "#f9e7fa";
         backgroundCyan = "#daf2f7";
+
+        lightRed = "#ff9594";
+        lightGreen = "#6bd6bf";
+        lightYellow = "#ffe18d";
+        lightBlue = "#97b9fa";
+        lightMagenta = "#e497ea";
+        lightCyan = "#83d5e5";
 
         brightRed = "#ff4242";
         brightGreen = "#00af89";
