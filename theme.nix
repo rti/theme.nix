@@ -123,7 +123,7 @@
 
         backgroundRed = "#fee7e6";
         backgroundGreen = "#d5fdf4";
-        backgroundYellow = "#fef6e7";
+        backgroundYellow = "#ffecba";
         backgroundBlue = "#eaf3ff";
         backgroundMagenta = "#f9e7fa";
         backgroundCyan = "#daf2f7";
