@@ -28,7 +28,6 @@
     foregroundOverlay = lib.mkOption { type = lib.types.str; };
     foregroundOverlay2 = lib.mkOption { type = lib.types.str; };
     foregroundOverlaySelect = lib.mkOption { type = lib.types.str; };
-    /* foregroundUrgentOverlay = lib.mkOption { type = lib.types.str; }; */
 
     foregroundBlue = lib.mkOption { type = lib.types.str; };
     foregroundRed = lib.mkOption { type = lib.types.str; };
@@ -61,6 +60,9 @@
     primary = lib.mkOption { type = lib.types.str; };
     secondary = lib.mkOption { type = lib.types.str; };
     urgent = lib.mkOption { type = lib.types.str; };
+    backgroundPrimary = lib.mkOption { type = lib.types.str; };
+    backgroundSecondary = lib.mkOption { type = lib.types.str; };
+    backgroundUrgent = lib.mkOption { type = lib.types.str; };
 
     /* 16 terminal colors */
     termBlack = lib.mkOption { type = lib.types.str; };
@@ -142,10 +144,13 @@
         brightMagenta = "#da465f";
         brightCyan = "#2bb7d3";
 
-        primary = foregroundCyan;
-        secondary = foregroundMagenta;
-        urgent = foregroundRed;
-        /* foregroundUrgentOverlay = foregroundMagenta; */
+        primary = brightCyan;
+        secondary = brightMagenta;
+        urgent = brightRed;
+        # TODO: fix confusing naming
+        backgroundPrimary = foregroundCyan;
+        backgroundSecondary = foregroundMagenta;
+        backgroundUrgent = foregroundRed;
 
         termBlack = background;
         termBrightBlack = foreground3;
