@@ -119,7 +119,7 @@
         foregroundRed = "#b34124";
         foregroundGreen = "#14866b";
         foregroundYellow = "#ac6700";
-        foregroundBlue = "#33a3cc";
+        foregroundBlue = "#1e7595";
         foregroundMagenta = "#b3243c";
         foregroundCyan = "#1e8195";
 
