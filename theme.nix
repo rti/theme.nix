@@ -90,16 +90,16 @@
         borderRadius = 8;
         borderWidth = 4;
         gaps = 16;
-        # wallpaper = ./wallpapers/nightsky.jpg;
-        wallpaper = gradient-png;
+        wallpaper = ./wallpapers/geometric-abstract-3840x2160-23187.jpg;
+        # wallpaper = gradient-png;
         cursorTheme = "Adwaita";
         cursorSize = 24;
 
-        # wikimedia codex
+        # Teal and copper hues with the original HSL saturation and lightness.
         foreground = "#000000";
-        foreground2 = "#404244";
-        foreground3 = "#72777d";
-        foreground4 = "#a2a9b1";
+        foreground2 = "#404344";
+        foreground3 = "#727a7d";
+        foreground4 = "#a2adb1";
         foregroundSelect = foreground;
         foregroundOverlay = background;
         foregroundOverlay2 = background3;
@@ -107,44 +107,44 @@
 
         background = "#ffffff";
         background2 = "#f8f9fa";
-        background3 = "#eaecf0";
-        background4 = "#c8ccd1";
+        background3 = "#eaeef0";
+        background4 = "#c8cfd1";
         backgroundSelect = background3;
         backgroundOverlay = foreground2;
         backgroundOverlay2 = foreground3;
         backgroundOverlaySelect = foregroundCyan;
 
-        foregroundRed = "#b32424";
-        foregroundGreen = "#14866d";
-        foregroundYellow = "#ac6600";
-        foregroundBlue = "#3366cc";
-        foregroundMagenta = "#A824B3";
+        foregroundRed = "#b34124";
+        foregroundGreen = "#14866b";
+        foregroundYellow = "#ac6700";
+        foregroundBlue = "#33a3cc";
+        foregroundMagenta = "#b3243c";
         foregroundCyan = "#1e8195";
 
-        backgroundRed = "#fee7e6";
+        backgroundRed = "#feebe6";
         backgroundGreen = "#d5fdf4";
-        backgroundYellow = "#ffecba";
-        backgroundBlue = "#eaf3ff";
-        backgroundMagenta = "#f9e7fa";
+        backgroundYellow = "#ffe3ba";
+        backgroundBlue = "#eaf9ff";
+        backgroundMagenta = "#fae7ea";
         backgroundCyan = "#daf2f7";
 
-        lightRed = "#ff9594";
-        lightGreen = "#6bd6bf";
-        lightYellow = "#ffe18d";
-        lightBlue = "#97b9fa";
-        lightMagenta = "#e497ea";
+        lightRed = "#ffa994";
+        lightGreen = "#6bd6bd";
+        lightYellow = "#ffd18d";
+        lightBlue = "#97e0fa";
+        lightMagenta = "#ea97a5";
         lightCyan = "#83d5e5";
 
-        brightRed = "#ff4242";
-        brightGreen = "#00af89";
-        brightYellow = "#ffcc33";
-        brightBlue = "#447ff5";
-        brightMagenta = "#ce46da";
+        brightRed = "#ff6842";
+        brightGreen = "#00af86";
+        brightYellow = "#ffad33";
+        brightBlue = "#44c6f5";
+        brightMagenta = "#da465f";
         brightCyan = "#2bb7d3";
 
         primary = foregroundCyan;
         secondary = foregroundMagenta;
-        urgent = termRed;
+        urgent = foregroundRed;
         /* foregroundUrgentOverlay = foregroundMagenta; */
 
         termBlack = background;
